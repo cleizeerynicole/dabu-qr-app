@@ -41,7 +41,39 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/auth-next'
   ],
+  auth: {
+    // options
+    redirect: {
+      login: '/auth/sigin', // redirect user when not connected
+      logout: '/auth/sigin', //redirect user when log out
+      callback: '/auth/callback', //callback URL after login
+      home: '/' //after log in redirectn
+    },
+    autoFetchUser: false,
+    strategies: {
+      google: {
+        clientId: '131619204212-k33geeo9aj63huh36hfi0csdcmdad45d.apps.googleusercontent.com',
+        scheme: 'oauth2',
+        endpoints: {
+          authorization: "https://accounts.google.com/o/oauth2/auth",
+          userInfo: "https://www.googleapis.com/oauth2/v3/userinfo",
+        },
+        token: {
+          property: "access_token",
+          type: "Bearer",
+          maxAge: 1800,
+        },
+        responseType: "token id_token",
+        scope: ["openid", "profile", "email"],
+        redirectUri: "http://localhost:3000/auth/callback",
+        codeChallengeMethod: "",
+      },
+    }
+  },
+
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
@@ -55,6 +87,7 @@ export default {
           secondary: colors.amber.darken3,
           info: colors.teal.lighten1,
           warning: colors.amber.base,
+
           error: colors.deepOrange.accent4,
           success: colors.green.accent3
         }

@@ -110,10 +110,15 @@ export default {
           to: '/inspire'
         },
          {
-          icon: 'mdi-signin',
+          icon: 'mdi-account',
           title: 'Sign In',
           to: 'auth/signin'
-        }
+        },
+         {
+          icon: 'mdi-qrcode',
+          title: 'QR-scanner',
+          to: 'auth/scan'
+        },
       ],
       miniVariant: false,
       right: true,

@@ -47,8 +47,8 @@ export default {
   auth: {
     // options
     redirect: {
-      login: '/auth/sigin', // redirect user when not connected
-      logout: '/auth/sigin', //redirect user when log out
+      login: '/auth/signin', // redirect user when not connected
+      logout: '/auth/signin', //redirect user when log out
       callback: '/auth/callback', //callback URL after login
       home: '/' //after log in redirectn
     },

@@ -68,7 +68,7 @@ export default {
         },
         responseType: "token id_token",
         scope: ["openid", "profile", "email"],
-        redirectUri: "http://localhost:3000/auth/callback",
+        redirectUri: "https://nuxt-google-auth-two.vercel.app/auth/callback",
         codeChallengeMethod: "",
       },
     }

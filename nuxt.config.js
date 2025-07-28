@@ -55,7 +55,7 @@ export default {
     autoFetchUser: false,
     strategies: {
       google: {
-        clientId: '131619204212-k33geeo9aj63huh36hfi0csdcmdad45d.apps.googleusercontent.com',
+        clientId: '545779663641-57vsm5v9c589uoghe6flbsg38333ravr.apps.googleusercontent.com',
         scheme: 'oauth2',
         endpoints: {
           authorization: "https://accounts.google.com/o/oauth2/auth",
